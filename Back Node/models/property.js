@@ -21,11 +21,11 @@ module.exports = (sequelize, DataTypes) => {
   };
   Property.init({
     price: DataTypes.INTEGER,
-    title: DataTypes.STRING,
-    location: DataTypes.STRING,
+    title: DataTypes.TEXT,
+    location: DataTypes.TEXT,
     room: DataTypes.INTEGER,
-    description: DataTypes.STRING,
-    picture: DataTypes.STRING
+    description: DataTypes.TEXT,
+    picture: DataTypes.TEXT
   }, {
     sequelize,
     modelName: 'Property',

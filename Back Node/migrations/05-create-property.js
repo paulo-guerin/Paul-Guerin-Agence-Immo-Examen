@@ -13,22 +13,22 @@ module.exports = {
         allowNull:false,
       },
       title: {
-        type: Sequelize.STRING,
+        type: Sequelize.TEXT,
         allowNull:false,
       },
       location: {
-        type: Sequelize.STRING,
+        type: Sequelize.TEXT,
         allowNull:false,
       },
       room: {
         type: Sequelize.INTEGER
       },
       description: {
-        type: Sequelize.STRING,
+        type: Sequelize.TEXT,
         allowNull:false,
       },
       picture: {
-        type: Sequelize.STRING
+        type: Sequelize.TEXT
       },
       TypeId:{
         type: Sequelize.INTEGER,
