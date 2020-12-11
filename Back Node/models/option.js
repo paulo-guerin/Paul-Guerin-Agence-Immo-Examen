@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
       Option.hasMany(models.PropertyOption);
     }
   };
-  PropertyOption.init({
+  Option.init({
     option: DataTypes.STRING
   }, {
     sequelize,

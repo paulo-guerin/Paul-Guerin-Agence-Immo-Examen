@@ -7,8 +7,9 @@ const express = require('express');
 const cors = require('cors');
 
 //Import router;
-// const gameRouter = require('./routes/game.router');
+const typeRouter = require('./routes/type.router');
 const userRouter = require('./routes/user.router');
+const optionRouter = require('./routes/option.router');
 
 const app = express();
 
@@ -24,8 +25,9 @@ app.use(express.urlencoded({ extended: false }))
 // Protect from CORS error
 app.use(cors());
 
-// app.use('/games', gameRouter);
+app.use('/types', typeRouter);
 app.use('/users', userRouter);
+app.use('/options', optionRouter);
 
 app.listen( port, () => {});
 

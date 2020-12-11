@@ -15,13 +15,13 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   Type.init({
-    typeName: DataTypes.STRING
-  }, {
-    sequelize,
-    modelName: {
-      typeName: DataTypes.STRING,
+    typeName: {
+      type: DataTypes.STRING,
       unique: true
     },
+  }, {
+    sequelize,
+    modelName: 'Type',
   });
   return Type;
 };

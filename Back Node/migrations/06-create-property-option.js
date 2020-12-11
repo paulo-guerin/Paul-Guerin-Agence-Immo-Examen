@@ -16,7 +16,7 @@ module.exports = {
           model: 'Properties',
           key: 'id'
         },
-        unique: 'PropertiesOption'
+        unique: 'PropertyOption'
       },
       OptionId: {
         type: Sequelize.INTEGER,
@@ -26,7 +26,7 @@ module.exports = {
           model: 'Options',
           key: 'id'
         },
-        unique: 'PropertiesOption'
+        unique: 'PropertyOption'
       },
       createdAt: {
         allowNull: false,

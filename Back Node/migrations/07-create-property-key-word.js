@@ -16,7 +16,7 @@ module.exports = {
           model: 'Properties',
           key: 'id'
         },
-        unique: 'PropertiesKeyWord'
+        unique: 'PropertyKeyWord'
       },
       KeyWordId: {
         type: Sequelize.INTEGER,
@@ -26,7 +26,7 @@ module.exports = {
           model: 'KeyWords',
           key: 'id'
         },
-        unique: 'PropertiesKeyWord'
+        unique: 'PropertyKeyWord'
       },
       createdAt: {
         allowNull: false,
