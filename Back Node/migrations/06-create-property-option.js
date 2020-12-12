@@ -1,7 +1,7 @@
 'use strict';
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable('PropertiesOptions', {
+    await queryInterface.createTable('PropertyOptions', {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -40,12 +40,12 @@ module.exports = {
     // Unique 
     .then(function() {
       return queryInterface.sequelize.query(
-        'ALTER TABLE `PropertiesOptions` ADD UNIQUE `unique_index`(`PropertyId`, `OptionId`)'
+        'ALTER TABLE `PropertyOptions` ADD UNIQUE `unique_index`(`PropertyId`, `OptionId`)'
       );
     });
   },
   
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('PropertiesOptions');
+    await queryInterface.dropTable('PropertyOptions');
   }
 };

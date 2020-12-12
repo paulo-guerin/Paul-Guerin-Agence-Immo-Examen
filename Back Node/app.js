@@ -10,6 +10,7 @@ const cors = require('cors');
 const typeRouter = require('./routes/type.router');
 const userRouter = require('./routes/user.router');
 const optionRouter = require('./routes/option.router');
+const propertyRouter = require('./routes/property.router');
 
 const app = express();
 
@@ -28,6 +29,7 @@ app.use(cors());
 app.use('/types', typeRouter);
 app.use('/users', userRouter);
 app.use('/options', optionRouter);
+app.use('/properties', propertyRouter);
 
 app.listen( port, () => {});
 

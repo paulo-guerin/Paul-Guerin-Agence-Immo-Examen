@@ -14,7 +14,6 @@ exports.option_add = (req, res, next) => {
 
 exports.option_list = (req, res, next) => {
     Option.findAll({
-      attributes: ['id', 'option']
     })
     .then( options => res.status(200).json(options))
     .catch(err => console.log(err))
@@ -22,17 +21,8 @@ exports.option_list = (req, res, next) => {
 
 exports.option_detail = (req, res, next) =>{
     const id = req.params.id;
-    Option.findAll({
-        attributes: ['id', 'option'],
-        where: {id : id},
-        include: [
-            {
-                model: Property,
-                attributes: ['id','title', 'UserId'],
-            }
-        ]
-    })
-    .then(option => res.status(200).json(option))
+    Option.findByPk(id)
+    .then(style => res.status(200).json(style))
     .catch(err => console.log(err))
 }
 
